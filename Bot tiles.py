@@ -44,31 +44,23 @@ print(color)
 print("Hold K to snipe or J to reverse snipe! - Press P to stop the bot")
 toggle = False
 while True:
-    if keyboard.read_key() == "l":
-        toggle = not toggle
-        print(toggle)
-        time.sleep(0.1)
-    if toggle:
-        while toggle:
-            for tile in tilesp:
-                if pyautogui.pixel(tile.x,tile.y) == color:
-                    click(tile.x,tile.y)
-            if keyboard.read_key() == "l":
-                toggle = not toggle
-                print(toggle)
-                time.sleep(0.1)
-            if keyboard.is_pressed("p") == True:
-                print("Exiting!")
-                break
-    else:
-        if keyboard.is_pressed("k") == True:
-            for tile in tilesp:
-                if pyautogui.pixel(tile.x,tile.y) == color:
-                    click(tile.x,tile.y)
-        if keyboard.is_pressed("j") == True:
-            for tile in tilesp:
-                if pyautogui.pixel(tile.x,tile.y) != color:
-                    click(tile.x,tile.y)
+    #if keyboard.read_key() == "l":
+    #    toggle = not toggle
+    #    print(toggle)
+    #    time.sleep(0.1)
+    #if toggle:
+    #    for tile in tilesp:
+    #            if pyautogui.pixel(tile.x,tile.y) == color:
+    #                click(tile.x,tile.y)
+    #else:
+    if keyboard.is_pressed("k") == True:
+        for tile in tilesp:
+            if pyautogui.pixel(tile.x,tile.y) == color:
+                click(tile.x,tile.y)
+    if keyboard.is_pressed("j") == True:
+        for tile in tilesp:
+            if pyautogui.pixel(tile.x,tile.y) != color:
+                click(tile.x,tile.y)
     if keyboard.is_pressed("p") == True:
             print("Exiting!")
             break
