@@ -5,3 +5,9 @@ Bot for any kind of game that you need to identify color changes in a grid, you 
 
 
 Wanted to make it faster with multithreading but i didn't quite nail that so don't use it yet
+
+# USAGE
+
+Hold K to snipe or J to reverse snipe! - Press P to stop the bot
+
+"Reverse snipe" is to look for any color that's not the one you chose
