@@ -19,6 +19,7 @@ def checktile(tileob,color,reverse):
             while True:
                 if pyautogui.pixel(tileob.x,tileob.y) != color:
                     thread = threading.Thread(target = click, args = (tileob.x,tileob.y))
+                    thread.daemon = True
                     thread.start()
                     while pyautogui.pixel(tileob.x,tileob.y) != color:
                         time.sleep(0.1)
@@ -28,6 +29,7 @@ def checktile(tileob,color,reverse):
                 if pyautogui.pixel(tileob.x,tileob.y) == color:
                     print("Found in " + str(tileob.x) + "," + str(tileob.y))
                     thread = threading.Thread(target = click, args = (tileob.x,tileob.y))
+                    thread.daemon = True
                     thread.start()
                     break
 
@@ -77,12 +79,14 @@ while True:
     if toggle:
         if running  == False:
             for thread in threadlist:
+                thread.daemon = True
                 thread.start()
             running=True
 
     else:
         if running == True:
             for thread in threadlist:
+                thread.daemon = True
                 thread.start()
             running=False
         if keyboard.is_pressed("k") == True:
