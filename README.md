@@ -13,3 +13,7 @@ Hold K to snipe or J to reverse snipe! - Press P to stop the bot
 
 "Reverse snipe" is to look for any color that's not the one you chose
 
+# Example
+
+![2021-11-14 23-55-53](https://user-images.githubusercontent.com/48382642/141715322-37d1c0b3-838d-43a9-925e-748637401dac.gif)
+
